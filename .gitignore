@@ -1,5 +1,17 @@
+
+# Environment variables and secrets
 .env
+.env.*
+
+# Eclipse generated files
+.metadata/
 .settings/
-.build/
-.classpath/
-.project 
+.classpath
+.project
+Servers/
+
+# Compiled and build files
+*.class
+target/
+build/
+
