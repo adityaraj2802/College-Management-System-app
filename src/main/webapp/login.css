@@ -1,0 +1,247 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Page background */
+/*body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #dbeafe, #c7d2fe, #e0e7ff);
+    background-size: 200% 200%;
+    animation: backgroundMove 8s ease infinite;
+}*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #dbeafe, #c7d2fe, #e0e7ff);
+    background-size: 200% 200%;
+    animation: backgroundMove 8s ease infinite;
+}
+
+/* Login container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+    animation: slideUp 0.8s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
+}
+
+/* Header */
+.head {
+    padding: 25px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+}
+
+.head h2 {
+    font-size: 26px;
+    letter-spacing: 0.5px;
+}
+
+/* Form area */
+.con-child {
+    padding: 30px;
+}
+
+.form-pg {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.form-pg label {
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Input fields */
+.form-pg input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+/* Input animation */
+.form-pg input:focus {
+    border-color: #4f46e5;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Login button */
+.form-pg button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover animation */
+.form-pg button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(79, 70, 229, 0.25);
+}
+
+.form-pg button:active {
+    transform: scale(0.98);
+}
+
+/* Create account link */
+.con-child > a {
+    display: block;
+    margin-top: 22px;
+    text-align: center;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.con-child > a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Error message */
+.message {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    color: #b91c1c;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    font-size: 14px;
+    animation: shakeIn 0.4s ease;
+}
+
+/* Entry animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background animation */
+@keyframes backgroundMove {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Error message animation */
+@keyframes shakeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .con-child {
+        padding: 25px 20px;
+    }
+
+    .head h2 {
+        font-size: 23px;
+    }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+.err-msg{
+	padding:10px;
+	text-align:center;
+	font-size:small;
+}
+/* Footer styling */
+footer {
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background: green;
+    color: white;
+    border-radius: 10px;
+}
+
+.dev-ifno {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#about,
+.mylinks {
+    max-width: 400px;
+}
+
+.mylinks a {
+    display: block;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
